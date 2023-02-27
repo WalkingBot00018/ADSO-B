@@ -1,4 +1,3 @@
-
 #esto es una tupla dentro de una variable llamada values
 values = (1, 0)
 #x,y=19,30
@@ -12,7 +11,8 @@ try:
 # dentro de los print esta uan f eso es templex iterales que basicamente es para que la variable aparesca y quede ordenadamente  
     print(f'q={q}')
     print(f'r={r}')
-##el except es una ecepcion o error que se tiene que corregir
-#el 
+#el except es una ecepcion o error que se tiene que corregir
+#aqui en el print nos muestran dos tipos de errores las cuales el zero es un error que no permite dividirse entre cero, el type es cuando usamos un tipo de dato incorrecto
+#el as aqui es para abreviar basicamento esos nombres de errores tan largos por una letra o otro nombre en especifico
 except (ZeroDivisionError, TypeError) as e:
     print(type(e), e)
