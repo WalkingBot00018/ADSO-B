@@ -1,0 +1,140 @@
+class Usuario:
+    def __init__(self, nombre, edad, telefono, usuario, contrasena):
+        self.nombre = nombre
+        self.edad = edad
+        self.telefono = telefono
+        self.usuario = usuario
+        self.contrasena = contrasena
+
+class Instructor:
+    def __init__(self, nombre, credenciales):
+        self.nombre = nombre
+        self.credenciales = credenciales
+
+class Transaccion:
+    def __init__(self, estudiante, cantidad, fecha, detalles):
+        self.estudiante = estudiante
+        self.cantidad = cantidad
+        self.fecha = fecha
+        self.detalles = detalles
+
+class Estudiante:
+    def __init__(self, nombre, edad, telefono, curso):
+        self.nombre = nombre
+        self.edad = edad
+        self.telefono = telefono
+        self.curso = curso
+
+class Materia:
+    def __init__(self, nombre, descripcion, cronograma, instructor):
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.cronograma = cronograma
+        self.instructor = instructor
+
+class Curso:
+    def __init__(self, descripcion, fecha, nivel, materia):
+        self.descripcion = descripcion
+        self.fecha = fecha
+        self.nivel = nivel
+        self.materia = materia
+
+class Inscripcion:
+    def __init__(self, estudiante, curso):
+        self.estudiante = estudiante
+        self.curso = curso
+
+class Sistema:
+    def __init__(self):
+        self.usuarios = []
+        self.instructores = []
+        self.transacciones = []
+        self.estudiantes = []
+        self.materias = []
+        self.cursos = []
+        self.inscripciones = []
+
+    def registrar_usuario(self, nombre, edad, telefono, usuario, contrasena):
+        nuevo_usuario = Usuario(nombre, edad, telefono, usuario, contrasena)
+        self.usuarios.append(nuevo_usuario)
+
+    def agregar_instructor(self, nombre, credenciales):
+        nuevo_instructor = Instructor(nombre, credenciales)
+        self.instructores.append(nuevo_instructor)
+
+    def crear_transaccion(self, estudiante, cantidad, fecha, detalles):
+        nueva_transaccion = Transaccion(estudiante, cantidad, fecha, detalles)
+        self.transacciones.append(nueva_transaccion)
+
+    def agregar_estudiante(self, nombre, edad, telefono, curso):
+        nuevo_estudiante = Estudiante(nombre, edad, telefono, curso)
+        self.estudiantes.append(nuevo_estudiante)
+
+    def crear_materia(self, nombre, descripcion, cronograma, instructor):
+        nueva_materia = Materia(nombre, descripcion, cronograma, instructor)
+        self.materias.append(nueva_materia)
+
+    def crear_curso(self, descripcion, fecha, nivel, materia):
+        nuevo_curso = Curso(descripcion, fecha, nivel, materia)
+        self.cursos.append(nuevo_curso)
+
+    def crear_inscripcion(self, estudiante, curso):
+        nueva_inscripcion = Inscripcion(estudiante, curso)
+        self.inscripciones.append(nueva_inscripcion)
+
+usuario1 = Usuario("Juan Perez", 25, "123456789", "juan123", "contraseña123")
+# Crear un objeto de la clase Instructor
+instructor1 = Instructor("Pedro Rodriguez", "Licenciatura en Educación")
+
+# Crear un objeto de la clase Transaccion
+transaccion1 = Transaccion("Juan Perez", 50, "2022-01-01", "Pago de inscripción")
+
+# Crear un objeto de la clase Estudiante
+estudiante1 = Estudiante("Maria Garcia", 20, "987654321", "Introducción a la programación")
+
+# Crear un objeto de la clase Materia
+materia1 = Materia("Programación Orientada a Objetos", "Aprende a programar en POO", "Lunes a Viernes, 9am a 12pm", instructor1)
+
+# Crear un objeto de la clase Curso
+curso1 = Curso("Introducción a la programación en Python", "2022-03-15", "Básico", materia1)
+
+# Crear un objeto de la clase Inscripcion
+inscripcion1 = Inscripcion(estudiante1, curso1)
+# Mostrar información del objeto Usuario
+print("Nombre: ", usuario1.nombre)
+print("Edad: ", usuario1.edad)
+print("Teléfono: ", usuario1.telefono)
+print("Usuario: ", usuario1.usuario)
+print("Contraseña: ", usuario1.contrasena)
+
+# Mostrar información del objeto Instructor
+print("Nombre: ", instructor1.nombre)
+print("Credenciales: ", instructor1.credenciales)
+
+# Mostrar información del objeto Transaccion
+print("Estudiante: ", transaccion1.estudiante)
+print("Cantidad: ", transaccion1.cantidad)
+print("Fecha: ", transaccion1.fecha)
+print("Detalles: ", transaccion1.detalles)
+
+# Mostrar información del objeto Estudiante
+print("Nombre: ", estudiante1.nombre)
+print("Edad: ", estudiante1.edad)
+print("Teléfono: ", estudiante1.telefono)
+print("Curso: ", estudiante1.curso)
+
+# Mostrar información del objeto Materia
+print("Nombre: ", materia1.nombre)
+print("Descripción: ", materia1.descripcion)
+print("Cronograma: ", materia1.cronograma)
+print("Instructor: ", materia1.instructor.nombre)
+
+# Mostrar información del objeto Curso
+print("Descripción: ", curso1.descripcion)
+print("Fecha: ", curso1.fecha)
+print("Nivel: ", curso1.nivel)
+print("Materia: ", curso1.materia.nombre)
+
+# Mostrar información del objeto Inscripcion
+print("Estudiante: ", inscripcion1.estudiante.nombre)
+print("Curso: ", inscripcion1.curso.descripcion)
