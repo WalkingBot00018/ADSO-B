@@ -83,58 +83,56 @@ class Sistema:
         self.inscripciones.append(nueva_inscripcion)
 
 usuario1 = Usuario("Juan Perez", 25, "123456789", "juan123", "contraseña123")
-# Crear un objeto de la clase Instructor
+
 instructor1 = Instructor("Pedro Rodriguez", "Licenciatura en Educación")
 
-# Crear un objeto de la clase Transaccion
 transaccion1 = Transaccion("Juan Perez", 50, "2022-01-01", "Pago de inscripción")
 
-# Crear un objeto de la clase Estudiante
+
 estudiante1 = Estudiante("Maria Garcia", 20, "987654321", "Introducción a la programación")
 
-# Crear un objeto de la clase Materia
+
 materia1 = Materia("Programación Orientada a Objetos", "Aprende a programar en POO", "Lunes a Viernes, 9am a 12pm", instructor1)
 
-# Crear un objeto de la clase Curso
+
 curso1 = Curso("Introducción a la programación en Python", "2022-03-15", "Básico", materia1)
 
-# Crear un objeto de la clase Inscripcion
+
 inscripcion1 = Inscripcion(estudiante1, curso1)
-# Mostrar información del objeto Usuario
+
 print("Nombre: ", usuario1.nombre)
 print("Edad: ", usuario1.edad)
 print("Teléfono: ", usuario1.telefono)
 print("Usuario: ", usuario1.usuario)
 print("Contraseña: ", usuario1.contrasena)
 
-# Mostrar información del objeto Instructor
 print("Nombre: ", instructor1.nombre)
 print("Credenciales: ", instructor1.credenciales)
 
-# Mostrar información del objeto Transaccion
+
 print("Estudiante: ", transaccion1.estudiante)
 print("Cantidad: ", transaccion1.cantidad)
 print("Fecha: ", transaccion1.fecha)
 print("Detalles: ", transaccion1.detalles)
 
-# Mostrar información del objeto Estudiante
+
 print("Nombre: ", estudiante1.nombre)
 print("Edad: ", estudiante1.edad)
 print("Teléfono: ", estudiante1.telefono)
 print("Curso: ", estudiante1.curso)
 
-# Mostrar información del objeto Materia
+
 print("Nombre: ", materia1.nombre)
 print("Descripción: ", materia1.descripcion)
 print("Cronograma: ", materia1.cronograma)
 print("Instructor: ", materia1.instructor.nombre)
 
-# Mostrar información del objeto Curso
+
 print("Descripción: ", curso1.descripcion)
 print("Fecha: ", curso1.fecha)
 print("Nivel: ", curso1.nivel)
 print("Materia: ", curso1.materia.nombre)
 
-# Mostrar información del objeto Inscripcion
+
 print("Estudiante: ", inscripcion1.estudiante.nombre)
 print("Curso: ", inscripcion1.curso.descripcion)
