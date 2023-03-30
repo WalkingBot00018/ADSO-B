@@ -1,0 +1,7 @@
+values = (1, 0) #Se declara una tupla con dos datos numericos en este caso 1 y 0
+try: #Se hace uso del try para mirar  los errores del siguiente bloque de codigo
+    q, r = divmod(*values) #Se declaran dos variables en una sola linea(q y r) y estas tendran como valor la funcion divmod que sirve para hallar el cociente y el residuo de 2 argumentos que en este caso sera la tupla del inicio llamada values pero para separar cada dato de la misma se podria asi(*values)
+    print(f'q={q}') #Si no se requiere pasar o continuar a la parte except pues se imprimira la varaible q con el metodo f{} el cual servira para mostrar el cociente de la division entre los datos de la tupla en este caso
+    print(f'r={r}') #Si no se requiere pasar o continuar a la parte except pues se imprimira la varaible r con el metodo f{} el cual servira para mostrar el residuo de la division entre los datos de la tupla en este caso
+except (ZeroDivisionError, TypeError) as e: #En esta parte se crea una estructura con dos errores(ZeroDivisionError, TypeError) la cual se le conocera como e con la palabra reservada as que sirve para poner un alias a cierto codigo o estructuras
+    print(type(e), e) #Si en el bloque try se evidencia que se comete un error de los que se encuentran en la parte except pues aqui vendra la conclusion, se imprimira el tipo de error que ocurrio y despues el causante de dicho error

@@ -1,0 +1,5 @@
+lunes -Aqui se agregaron los dias de la semana, todo en nuevas lineas 
+martes
+miercoles
+jueves
+viernes  
